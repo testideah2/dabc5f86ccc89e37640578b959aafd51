@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        id          = "tk.bestnews-so2.gor"
+        versionCode = "10"
+        version     = "1.0.0">
+
+    <name>ТЕСТ. BestNews</name>
+
+    <description>
+        Best News Standoff 2
+    </description>
+
+    <author>Tadapp</author>
+
+    <preference name='phonegap-version' value='cli-9.0.0' />
+
+    <plugin name='cordova-plugin-splashscreen' />
+    <plugin name='cordova-plugin-inappbrowser' />
+
+    <gap:plugin name='onesignal-cordova-plugin' spec='2.4.5' source='npm' />
+
+    <preference name='android-build-tool' value='gradle' />
+    <preference name="android-targetSdkVersion" value="29" />
+    <preference name='orientation' value='portrait' />
+
+    <preference name='windows-appx-target' value='8.1-phone' />
+    <preference name='WindowsToastCapable' value='true' />
+
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashScreenSpinnerColor" value="#007BFF" />
+    
+    <platform name="android">
+      <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+          <application android:usesCleartextTraffic="true" />
+      </edit-config>
+    </platform>
+
+
+    <platform name="android">
+        <icon src="res/android/icon/726f60be78ffffb853030f0208a9a0c8.png" density="ldpi" />
+        <icon src="res/android/icon/3c2ed18b53f064b1af2abf8d2edc3ed7.png" density="mdpi" />
+        <icon src="res/android/icon/28c288a696abc186d7ce32b4bcd90a33.png" density="hdpi" />
+        <icon src="res/android/icon/6558eb3e98b12ac6865f06d6003ae9d6.png" density="xhdpi" />
+        <icon src="res/android/icon/f5d350792e322cea8b7beea2948c254d.png" density="xxhdpi" />
+        <icon src="res/android/icon/6c4281e1438933bb9b3172eca0c23c63.png" density="xxxhdpi" />
+
+        <splash src="res/android/screen/4aa2209223575c263c16f2ca0c77a3f1.png" density="port-hdpi"/>
+        <splash src="res/android/screen/7709e3bb7dbc9fa24c40c72797dc970f.png" density="port-ldpi"/>
+        <splash src="res/android/screen/79792083bfdb84c7c902c9877db9acee.png" density="port-mdpi"/>
+        <splash src="res/android/screen/274546e69dc9bc521a2509bf3d81a615.png" density="port-xhdpi"/>
+    </platform>
+
+    <platform name="ios">
+        <icon src="res/ios/icon/8fa93d68fe483c211d8a0cc6c768264a.png" width="180" height="180" />
+        <icon src="res/ios/icon/42979798452d3c5015d0fbbb8ab0caf7.png" width="60" height="60" />
+        <icon src="res/ios/icon/b2f3ca4ce30bd9c902c75179e767f7f8.png" width="120" height="120" />
+        <icon src="res/ios/icon/a8850b09d6c952529bda88abb8178b14.png" width="76" height="76" />
+        <icon src="res/ios/icon/dfa7ae7035d9faeee1680d1aaaede124.png" width="152" height="152" />
+        <icon src="res/ios/icon/f7688d0bf63fe7e9b360bbd92152f43c.png" width="57" height="57" />
+        <icon src="res/ios/icon/310324107713580f7735e9ae441ee53c.png" width="114" height="114" />
+        <icon src="res/ios/icon/8e8d096e8d91a34dd3df85ab33dcb400.png" width="72" height="72" />
+        <icon src="res/ios/icon/cb910b75c84df14622f0e7cddadf1e19.png" width="144" height="144" />
+        <icon src="res/ios/icon/aa519dacdc927ec9b3c31ef5dc408e68.png" width="167" height="167" />
+        <icon src="res/ios/icon/25f159ea1d9c1d8f16d56a9db71ebb22.png" width="29" height="29" />
+        <icon src="res/ios/icon/dc3aded579325439e8b963759101937c.png" width="58" height="58" />
+        <icon src="res/ios/icon/9ede9bbbefa3be8d131dd2a225bafbf0.png" width="87" height="87" />
+        <icon src="res/ios/icon/df1cd4ba03b9eb916718965471d1b84f.png" width="167" height="167" />
+
+        <splash src="res/ios/screen/c6b24cb13453ddbd5f2022970c8fc9da.png" />
+        <splash src="res/ios/screen/d767f9645fb3a78e778475f16ef0e9fa.png" />
+        <splash src="res/ios/screen/43aef973f20d761b09216405cf22495c.png" />
+        <splash src="res/ios/screen/b19cd94bbe7b7f5e50aacc8793c90db6.png" />
+        <splash src="res/ios/screen/04c49b18b5a63cee05861795abf97fa5.png" />
+        <splash src="res/ios/screen/6b79ee9ccccfb14a4080a3bb82553474.png" />
+    </platform>
+
+    <platform name="winphone">
+        <icon src="res/windows/icon/ffa1cf364ab5c47dbb8b08e0bc75b580.png" target="StoreLogo" />
+        <icon src="res/windows/icon/4f114d48824c4a4d0acae765a1e12d72.png" target="Square30x30Logo" />
+        <icon src="res/windows/icon/c4ebde41d0529cc1d2ef978e1e1649e1.png" target="Square44x44Logo" />
+        <icon src="res/windows/icon/c1d4288b297795968629d2f0835fda95.png" target="Square70x70Logo" />
+        <icon src="res/windows/icon/ffe2473f98b687d4cf9b96ca01004611.png" target="Square71x71Logo" />
+        <icon src="res/windows/icon/a388fd37e59396019328e6ad6a30767b.png" target="Square150x150Logo" />
+        <icon src="res/windows/icon/9e0fa65e908ebdddc8ffdb8635c91324.png" target="Square310x310Logo" />
+
+        <splash src="res/windows/screen/a5ab34496b795b4195a69215393b27ec.png" target="SplashScreen"/>
+        <splash src="res/windows/screen/e3d61d0db7fbe2827ecb99dca0611306.png" target="SplashScreenPhone"/>
+    </platform>
+
+    <access origin='*'/>
+    <plugin name='cordova-plugin-whitelist' />
+    <allow-intent href='http://*/*'/>
+    <allow-intent href='https://*/*'/>
+    <allow-intent href='tel:*'/>
+    <allow-intent href='sms:*'/>
+    <allow-intent href='mailto:*'/>
+    <allow-intent href='geo:*'/>
+
+</widget>
